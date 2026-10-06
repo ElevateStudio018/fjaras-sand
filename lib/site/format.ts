@@ -20,7 +20,7 @@ export function fullAddress(company: Company): string {
 
 /** "Romelanda, Kungälv": the postal town and the municipality. */
 export function seat(company: Company): string {
-  // "Piteå", not "Piteå, Piteå", when the town and the municipality share their name.
+  // "Fjärås", not "Fjärås, Fjärås", when the town and the municipality share their name.
   return company.address.city && company.address.city !== company.city ? `${company.address.city}, ${company.city}` : company.city;
 }
 
