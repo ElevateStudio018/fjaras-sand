@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-06T07:20:29.131Z",
+  "fetched": "2026-10-06T07:22:28.662Z",
   "start": "https://www.fjarassand.se/",
   "pages": [
     {
@@ -7730,6 +7730,12 @@
     }
   ],
   "photos": {
+    "https://www-static.fjarassand.se/wp-content/uploads/2020/01/cropped-logo-website-2.png": {
+      "width": 200,
+      "height": 73,
+      "logo": "/photos/site/logo-cropped-logo-website-2.png",
+      "variants": []
+    },
     "https://www.fjarassand.se/wp-content/uploads/2020/01/Tackbark_Torrt.jpg": {
       "width": 700,
       "height": 525,
@@ -7821,6 +7827,12 @@
           "src": "/photos/site/sand-700.webp"
         }
       ]
+    },
+    "https://fjarassand.se/wp-content/uploads/2020/01/logo-footer.png": {
+      "width": 197,
+      "height": 73,
+      "logo": "/photos/site/logo-logo-footer.png",
+      "variants": []
     },
     "https://www-static.fjarassand.se/wp-content/uploads/2024/11/galleriet2.jpg": {
       "width": 3024,
@@ -8468,8 +8480,6 @@
     "https://www.fjarassand.se/gallery/flis_torrt/: 4 photos",
     "https://www.fjarassand.se/gallery/grus_vatt/: 4 photos",
     "https://www.fjarassand.se/gallery/grus_torrt/: 4 photos",
-    "photo skipped (small 200px): https://www-static.fjarassand.se/wp-content/uploads/2020/01/cropped-logo-website-2.png",
-    "photo skipped (small 197px): https://fjarassand.se/wp-content/uploads/2020/01/logo-footer.png",
     "photo skipped (small 266px): https://fjarassand.se/wp-content/uploads/2020/01/galleri.jpg",
     "photo skipped (small 70px): https://fjarassand.se/wp-content/uploads/2020/01/Kross_ljus_Torrt_thumb.jpg",
     "photo skipped (small 70px): https://fjarassand.se/wp-content/uploads/2020/01/Kross_mork_Vatt_thumb.jpg",
@@ -8494,6 +8504,6 @@
     "photo skipped (small 70px): https://fjarassand.se/wp-content/uploads/2020/01/Barkmull_Torrt_thumb.jpg",
     "photo skipped (small 70px): https://fjarassand.se/wp-content/uploads/2020/01/EU-Sand_Torrt_thumb.jpg",
     "photo skipped (small 70px): https://fjarassand.se/wp-content/uploads/2020/01/Baksand_Sandladesand_Torrt_thumb.jpg",
-    "pages: 44, photos saved: 42 of 68"
+    "pages: 44, photos saved: 44 of 68"
   ]
 }
