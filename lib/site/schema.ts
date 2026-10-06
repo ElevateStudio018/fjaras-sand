@@ -238,7 +238,7 @@ const sectionBase = {
 };
 
 /** How the first screen is laid out; left out: the photo across the whole screen with the text over it. */
-export const heroLayouts = ["photo", "split", "frame", "headline", "collage", "infobar"] as const;
+export const heroLayouts = ["photo", "center", "panel", "card", "tiles", "infobar"] as const;
 const heroSection = z.object({
   type: z.literal("hero"),
   ...sectionBase,
