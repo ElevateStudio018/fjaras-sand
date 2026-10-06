@@ -131,6 +131,13 @@ for (const url of allPhotos) {
   try {
     const input = Buffer.from(await (await get(url)).arrayBuffer());
     const meta = await sharp(input).metadata();
+    // Logos are kept as they are, whatever their size, for the new site's own logo to be made from.
+    if (/logo/i.test(url)) {
+      const ext = new URL(url).pathname.split(".").pop().toLowerCase();
+      writeFileSync(`${PHOTO_DIR}/logo-${base}.${ext}`, input);
+      saved[url] = { width: meta.width, height: meta.height, logo: `/photos/site/logo-${base}.${ext}`, variants: [] };
+      continue;
+    }
     if (!meta.width || meta.width < 300) {
       note(`photo skipped (small ${meta.width}px): ${url}`);
       continue;
