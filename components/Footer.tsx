@@ -94,7 +94,7 @@ export function Footer({ site }: { site: SiteData }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border-[1.5px] border-footer-text/30 transition-colors hover:border-footer-text hover:bg-footer-text hover:text-footer"
+                      className="flex h-11 w-11 items-center justify-center rounded-[3px] border-[1.5px] border-footer-text/30 transition-colors hover:border-footer-text hover:bg-footer-text hover:text-footer"
                     >
                       <Icon name={icon} strokeWidth={2} className="h-5 w-5" />
                     </a>

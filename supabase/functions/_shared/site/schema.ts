@@ -238,7 +238,17 @@ const sectionBase = {
   label: text(80),
 };
 
-const heroSection = z.object({ type: z.literal("hero"), ...sectionBase, eyebrow: lineText, heading: lineText, image: imageSchema, button: linkSchema });
+/** How the first screen is laid out; left out: the photo across the whole screen with the text over it. */
+export const heroLayouts = ["photo", "split", "frame", "headline", "collage", "infobar"] as const;
+const heroSection = z.object({
+  type: z.literal("hero"),
+  ...sectionBase,
+  eyebrow: lineText,
+  heading: lineText,
+  image: imageSchema,
+  button: linkSchema,
+  layout: z.enum(heroLayouts).optional(),
+});
 const servicesSection = z.object({ type: z.literal("services"), ...sectionBase, heading: lineText, link: linkSchema, cardLinkPrefix: lineText });
 const uppdragCarouselSection = z.object({ type: z.literal("uppdragCarousel"), ...sectionBase, heading: lineText, text: longText, link: linkSchema });
 const statItemSchema = z.object({

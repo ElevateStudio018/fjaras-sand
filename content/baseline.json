@@ -1178,7 +1178,8 @@
               "button": {
                 "label": "Begär offert",
                 "href": "#offert"
-              }
+              },
+              "layout": "split"
             },
             "tjanster": {
               "type": "services",

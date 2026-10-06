@@ -53,7 +53,7 @@ export function GalleryGrid({ entries, labels }: { entries: Entry[]; labels: { c
 
   const current = open === null ? null : entries[open];
   const navClass =
-    "absolute top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-accent text-on-accent transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-14 sm:w-14";
+    "absolute top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-[3px] bg-accent text-on-accent transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-14 sm:w-14";
 
   return (
     <>

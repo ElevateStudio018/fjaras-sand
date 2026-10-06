@@ -66,7 +66,7 @@ export function UppdragCarousel({ items, labels }: { items: (Uppdrag & { id: str
   // stand free of the photos. On hover they turn black and the arrow nudges the way it points; at either end they
   // fade out instead of disappearing.
   const arrowClass =
-    "group/nav absolute top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-accent text-on-accent shadow-lg ring-4 ring-page transition duration-200 hover:bg-secondary hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-ink disabled:pointer-events-none disabled:opacity-0 sm:h-14 sm:w-14";
+    "group/nav absolute top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-[3px] bg-accent text-on-accent shadow-lg ring-4 ring-page transition duration-200 hover:bg-secondary hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-ink disabled:pointer-events-none disabled:opacity-0 sm:h-14 sm:w-14";
 
   return (
     <div>

@@ -8,9 +8,12 @@ export interface LogoContent {
   name: string;
 }
 
-// Fjärås Sand & Makadam's logo redrawn from their artwork (public/photos/site/logo-*.png, too small to use as it is): a
-// standing stone beside "AB FJÄRÅS" over "SAND & MAKADAM", in heavy wide capitals, drawn in the current text colour –
-// white on the blue bar, the menu and the footer. An uploaded logo replaces it at the same height.
+// Fjärås Sand & Makadam's own logo (public/logo-fjaras.png, from fjarassand.se), used as a mask so it is drawn in the
+// current text colour: white on the blue bar, the menu and the footer, blue in the admin. An uploaded logo replaces it at
+// the same height.
+const LOGO_SRC = "/logo-fjaras.png";
+const LOGO_RATIO = 200 / 73;
+
 export function Wordmark({ content, className = "" }: { content: LogoContent; className?: string }) {
   if (content.logo.kind === "image") {
     return (
@@ -19,17 +22,10 @@ export function Wordmark({ content, className = "" }: { content: LogoContent; cl
     );
   }
 
+  const mask = `url(${withBasePath(LOGO_SRC)}) center / contain no-repeat`;
   return (
-    <span className={`flex h-11 items-center gap-2.5 sm:h-12 ${className}`}>
-      <svg viewBox="0 0 24 48" aria-hidden="true" className="h-10 w-auto shrink-0 sm:h-11" fill="currentColor">
-        {/* A tall, rough standing stone. */}
-        <path d="M9.5 1.5 14 3l3.5 4 1 9-1.2 8 1.7 9-1 9.5L19 47H4l-.8-4.5L4 33l-1.4-8.5L4 15l1.6-9.5z" />
-      </svg>
-      <span className="flex flex-col font-heading font-black uppercase leading-[0.95]">
-        <span className="text-[19px] tracking-[0.04em] sm:text-[22px]">AB Fjärås</span>
-        <span className="text-[11.5px] tracking-[0.06em] sm:text-[13px]">Sand &amp; Makadam</span>
-        <span className="sr-only"> – {content.name}</span>
-      </span>
+    <span className={`block h-11 bg-current sm:h-[52px] ${className}`} style={{ aspectRatio: LOGO_RATIO, mask, WebkitMask: mask }}>
+      <span className="sr-only">{content.name}</span>
     </span>
   );
 }
