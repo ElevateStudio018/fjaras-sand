@@ -1179,7 +1179,7 @@
                 "label": "Begär offert",
                 "href": "#offert"
               },
-              "layout": "panel"
+              "layout": "center"
             },
             "tjanster": {
               "type": "services",
